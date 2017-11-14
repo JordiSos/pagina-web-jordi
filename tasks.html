@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>¿Cuál es tu problema?</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="styles/grid.css">
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<meta charset="UTF-8">
+    <script src="./js/jquery-3.2.1.js"></script>
+</head>
+
+<body>
+	<nav class="navbar">
+		<ul class="navbar-list">
+			<li class="navbar-item">
+				<a href='index.html'>Inicio</a>
+			</li>
+			<li class="navbar-item">
+				<a href="index.html#quien-soy">Quien soy</a>
+			</li>
+			<li class="navbar-item">
+				<a href="index.html#equipo">Equipo</a>
+			</li>
+			<li class="navbar-item">
+				<a href="index.html#transporte">Transporte</a>
+			</li>
+			<li class="navbar-item">
+				<a href="contact.html">Contacto</a>
+			</li>
+			<li class="navbar-item active">
+				<a href="tasks.html">Tareas</a>
+			</li>
+		</ul>
+	</nav>
+
+	<div class="container">
+		<section class="row section-container">
+
+			<h2>Tareas</h2>
+
+			<div class="col-6">
+				<h3>Añadir nuevo encargo</h3>
+				<form>
+					<input type="text" id="newTaskName" name="name" placeholder="Nueva tarea..." required>
+					<br>
+					<br>
+					<button id="sendNewTask">Enviar</button>
+				</form>
+			</div>
+
+			<div class="col-6">
+				<h3>Soy deshonesto,
+					 y siempre puedes confiar en que la persona deshonesta será deshonesta. Honestamente. 
+					Es a los honestos a los que tienes que vigilar de cerca,
+					 porque nunca puedes predecir cuando harán algo… absurdo </h3>
+				<div class="loader"></div>
+				<div>
+					<ul id="taskContainer">
+							<figure class="team-member-photo">
+									<img src="./images/sprrow.jpg" alt="Navi">
+							   </figure>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+	</div>
+
+	<footer class="footer">
+		Jordi Sos &copy; 2017 BBAA
+	</footer>
+</body>
+<script src="js/ajax.js"></script>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/grid.css">
+    <link rel="stylesheet" href="./styles/style.css">
+
+   
+    <script>
+        function initialize() {
+            var myLatLng = {lat: 42.762480, lng: -83.283406};
+
+              var mapProp = {
+                center:myLatLng,
+                zoom:15,
+                mapTypeId:google.maps.MapTypeId.ROADMAP
+              };
+              var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+              var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: 'Nos puedes encontrar aqui'
+              });
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="navbar-list">
+            <li class="navbar-item">
+                <a href="index.html">Inicio</a>
+            </li>
+            <li class="navbar-item">
+                <a href="index.html#quien-soy">Quien soy</a>
+            </li>
+            <li class="navbar-item">
+                <a href="index.html#equipo">Equipo</a>
+            </li>
+            <li class="navbar-item">
+                <a href="index.html#transporte">Compañía</a>
+            </li>
+            <li class="navbar-item active">
+                <a href="contact.html">Contacto</a>
+            </li>
+            <li class="navbar-item">
+                <a href="tasks.html">Tareas</a>
+            </li>
+            </ul>
+    </nav>
+
+    <main class="container">
+        <section class="contact section-container">
+            <h2>Déjanos tu pergamino, sucia rata de agua dulce.
+            Te esperamos en Tortuga
+            </h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7737786.390132737!2d-81.75873968349605!3d18.743885985612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eda2a1bc6cf719d%3A0x59a0d1c0b5120efa!2sJamaica!5e0!3m2!1ses!2ses!4v1510691838963" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            
+            <div class="row">
+                <div class="col-6">
+                    <div id="googleMap"></div>    
+                </div>
+
+                <div class="col-6">
+                    <div class="form">
+                        <form name="contacto" method="get">
+                            <div class="form-row">
+                                <!--nombre y apellido-->
+                                <label for="nombre">Nombre:</label>
+                                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                            </div>
+                            <div class="form-row">
+                                <!--email-->
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" placeholder="name@company.com" 
+                                pattern="[A-Za-z0-9\.\+]+@[A-Za-z0-9]+\.[A-Za-z0-9\.]+" required>
+                                
+                            </div>
+                            <div class="form-row">
+                                <!--opciones - radio-->
+                                <div>Tipo de saqueo</div>
+                                <label for="tipo_mision_1">Barco</label>
+                                <input type="radio" id="tipo_mision_1" name="tipo_mision" value="Rescate" required>
+
+                                <label for="tipo_mision_2">Cueva</label>
+                                <input type="radio" id="tipo_mision_2" name="tipo_mision" value="Ajuste de cuentas" required>
+
+                                <label for="tipo_mision_3">Flota de la marina</label>
+                                <input type="radio" id="tipo_mision_3" name="tipo_mision" value="Disparos y explosivos" required>
+                            </div>
+                            <div class="form-row">
+                                <!--número-->
+                                <label for="ejercito">Tamaño del navío :</label>
+                                <input type="number" id="navío" name="navío" min="10" required>
+                            </div>
+                            <div class="form-row">
+                                    <!--fecha-->
+                                    <label for="fecha">Fecha del trabajo:</label>
+                                    <input type="date" id="fecha" name="fecha" required>
+                            </div>
+                            <div class="form-row">
+                                <!--botón enviar-->
+                                <!-- Para poder meter cosas ahí dentro no puede ser 
+                                    input. Tiene que ser button-->
+                                    <button type="submit" id="enviar">Enviar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-container">
+            <table>
+                <thead>
+                    <tr>
+                       <th>Tipo de saqueo</th> 
+                       <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Saquear y beber ron</td>
+                        <td>10 monedas de plata</td>
+                    </tr>
+                    <tr>
+                        <td>Saquear más y beber menos</td>
+                        <td>10 monedas de oro</td>
+                    </tr>
+                    <tr>
+                        <td>Matar animal mitológico (Kraken)</td>
+                        <td>100 coronas de oro y mucho ron</td>
+                    </tr>
+                    <tr>
+                        <td>Rescatar navío hundido</td>
+                        <td>5000 coronas de oro y 2 barcos medianos</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+    </footer>
+</body>
+</html>
